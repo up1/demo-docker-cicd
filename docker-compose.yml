@@ -1,0 +1,15 @@
+version: "3"
+services:
+    nginx:
+        image: somkiat/nginx:1.0.0
+        build: 
+            context: ./nginx
+            dockerfile: Dockerfile
+        ports:
+          - 8888:8080
+
+    mynodejs:
+        image: somkiat/mynodejs:1.0.0
+        build: 
+            context: ./nodejs
+            dockerfile: Dockerfile
